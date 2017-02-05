@@ -87,7 +87,6 @@ public class FasterLadderClimbing extends Feature {
         }
 
         private float getElevationChangeUpdate() {
-            System.out.println("CURRENT MODIFER = " + speedModifier);
             return (float)Math.abs(player.rotationPitch / 90.0) * (((float)speedModifier) / 10);
         }
 

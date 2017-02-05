@@ -150,13 +150,11 @@ public final class ModuleLoader {
 
 		@SubscribeEvent
 		public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-			System.out.println(eventArgs.modID);
 			if(eventArgs.modID.equals(Ref.MOD_ID))
 				loadModuleConfigs();
 		}
 		@SubscribeEvent
 		public void onConfigChanged(ConfigChangedEvent.PostConfigChangedEvent eventArgs) {
-			System.out.println(eventArgs.modID);
 			if(eventArgs.modID.equals(Ref.MOD_ID))
 				loadModuleConfigs();
 		}
