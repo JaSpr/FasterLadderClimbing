@@ -2,7 +2,7 @@
   {
     "modid": "fasterladderclimbing",
     "name": "Faster Ladder Climbing",
-    "description": "Go up or down ladders faster by looking up or down. http://github.com/jaspr/FasterLadderClimbing",
+    "description": "Go up or down ladders faster by looking up or down. http://github.com/JaSpr/FasterLadderClimbing",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "logoFile": "",

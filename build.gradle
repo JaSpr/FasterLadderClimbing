@@ -24,7 +24,7 @@ ext.configFile = file('build.properties')
 
 ext.config = parseConfig(configFile)
 
-version = "${config.version}-${config.build_number}"
+version = "${config.mc_version}-${config.version}-${config.build_number}"
 group = "jaspr.base" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = config.mod_name
 
@@ -36,7 +36,7 @@ minecraft {
     replace 'GRADLE:BUILD', config.build_number
     replace 'GRADLE:VERSION', config.version
 
-    replaceIn 'LibMisc.java' //I may have missed another file, though I can only find it in here.
+    replaceIn 'Ref.java' //I may have missed another file, though I can only find it in here.
     makeObfSourceJar = false
 }
 
