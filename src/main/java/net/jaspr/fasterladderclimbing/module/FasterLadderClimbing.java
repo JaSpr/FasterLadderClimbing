@@ -20,6 +20,8 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.jaspr.base.module.Feature;
 
+import static net.minecraft.entity.MoverType.SELF;
+
 public class FasterLadderClimbing extends Feature {
 
     private boolean allowQuickAscension;
@@ -93,13 +95,13 @@ public class FasterLadderClimbing extends Feature {
         public void moveUpFarther() {
             int px = 0;
             float dx = getElevationChangeUpdate();
-            player.moveEntity(px, dx, px);
+            player.move(SELF, px, dx, px);
         }
 
         public void moveDownFarther() {
             int px = 0;
             float dx = getElevationChangeUpdate();
-            player.moveEntity(px, (dx * -1), px);
+            player.move(SELF, px, (dx * -1), px);
         }
     }
 
