@@ -115,7 +115,7 @@ public final class ModuleLoader {
 
 		loadModuleConfigs();
 
-		FMLCommonHandler.instance().bus().register(new ChangeListener());
+		MinecraftForge.EVENT_BUS.register(new ChangeListener());
 	}
 
 	private static void loadModuleConfigs() {
@@ -150,14 +150,12 @@ public final class ModuleLoader {
 
 		@SubscribeEvent
 		public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-			System.out.println(eventArgs.modID);
-			if(eventArgs.modID.equals(Ref.MOD_ID))
+			if(eventArgs.getModID().equals(Ref.MOD_ID))
 				loadModuleConfigs();
 		}
 		@SubscribeEvent
 		public void onConfigChanged(ConfigChangedEvent.PostConfigChangedEvent eventArgs) {
-			System.out.println(eventArgs.modID);
-			if(eventArgs.modID.equals(Ref.MOD_ID))
+			if(eventArgs.getModID().equals(Ref.MOD_ID))
 				loadModuleConfigs();
 		}
 

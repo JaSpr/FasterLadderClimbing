@@ -35,11 +35,11 @@ public class FasterLadderClimbing extends Feature {
 
     @SubscribeEvent
     public void onPlayerTick(LivingUpdateEvent event) {
-        if (false == (event.entityLiving instanceof EntityPlayer)) {
+        if (false == (event.getEntityLiving() instanceof EntityPlayer)) {
             return;
         }
 
-        EntityPlayer player = (EntityPlayer)event.entityLiving;
+        EntityPlayer player = (EntityPlayer)event.getEntityLiving();
 
         if (player.isOnLadder() && !player.isSneaking()) {
             EntityClimber climber = new EntityClimber(player);
@@ -87,7 +87,6 @@ public class FasterLadderClimbing extends Feature {
         }
 
         private float getElevationChangeUpdate() {
-            System.out.println("CURRENT MODIFER = " + speedModifier);
             return (float)Math.abs(player.rotationPitch / 90.0) * (((float)speedModifier) / 10);
         }
 
