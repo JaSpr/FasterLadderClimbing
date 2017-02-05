@@ -119,6 +119,9 @@ public class Feature {
 	public final int loadPropInt(String propName, String desc, int default_) {
 		return ConfigHelper.loadPropInt(propName, configCategory, desc, default_);
 	}
+	public final int loadPropInt(String propName, String desc, int default_, int minValue, int maxValue) {
+		return ConfigHelper.loadPropInt(propName, configCategory, desc, default_, minValue, maxValue);
+	}
 
 	public final double loadPropDouble(String propName, String desc, double default_) {
 		return ConfigHelper.loadPropDouble(propName, configCategory, desc, default_);

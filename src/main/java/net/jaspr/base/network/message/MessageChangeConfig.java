@@ -1,12 +1,16 @@
 /**
- * This class was created by <Vazkii>. It's distributed as
+ * This class was implemented by <JaSpr>. It is distributed as part of the FasterLadderClimbing Mod.
+ * https://github.com/JaSpr/FasterLadderClimbing
+ *
+ * FasterLadderClimbing is Open Source and distributed under the
+ * CC-BY-NC-SA 3.0 License: https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB
+ *
+ * This class was derived from works created by <Vazkii> which were distributed as
  * part of the Quark Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Quark
- * 
+ *
  * Quark is Open Source and distributed under the
  * CC-BY-NC-SA 3.0 License: https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB
- * 
- * File Created @ [15/07/2016, 06:03:43 (GMT)]
  */
 package net.jaspr.base.network.message;
 

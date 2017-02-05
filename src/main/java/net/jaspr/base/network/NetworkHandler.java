@@ -1,12 +1,16 @@
 /**
- * This class was created by <Vazkii>. It's distributed as
- * part of the Psi Mod. Get the Source Code in github:
- * https://github.com/Vazkii/Psi
+ * This class was implemented by <JaSpr>. It is distributed as part of the FasterLadderClimbing Mod.
+ * https://github.com/JaSpr/FasterLadderClimbing
  *
- * Psi is Open Source and distributed under the
- * Psi License: http://psi.vazkii.us/license.php
+ * FasterLadderClimbing is Open Source and distributed under the
+ * CC-BY-NC-SA 3.0 License: https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB
  *
- * File Created @ [11/01/2016, 21:58:25 (GMT)]
+ * This class was derived from works created by <Vazkii> which were distributed as
+ * part of the Quark Mod. Get the Source Code in github:
+ * https://github.com/Vazkii/Quark
+ *
+ * Quark is Open Source and distributed under the
+ * CC-BY-NC-SA 3.0 License: https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB
  */
 package net.jaspr.base.network;
 

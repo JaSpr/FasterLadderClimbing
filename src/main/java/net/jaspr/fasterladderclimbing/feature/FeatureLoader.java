@@ -22,7 +22,7 @@ public class FeatureLoader extends Module {
 
 	@Override
 	public void addFeatures() {
-		registerFeature(new FasterLadderClimbing(), "Faster ladder climbing");
+		registerFeature(new FasterLadderClimbing(), "fasterladderclimbing");
 	}
 
 }

@@ -1,6 +1,5 @@
 /**
- * This class was implemented by <JaSpr>. It is distributed as part
- * of the FasterLadderClimbing Mod.
+ * This class was implemented by <JaSpr>. It is distributed as part of the FasterLadderClimbing Mod.
  * https://github.com/JaSpr/FasterLadderClimbing
  *
  * FasterLadderClimbing is Open Source and distributed under the
@@ -20,11 +19,16 @@ import net.minecraftforge.common.config.Property;
 public class ConfigHelper {
 
 	public static boolean needsRestart;
-	
+
 	public static int loadPropInt(String propName, String category, String desc, int default_) {
 		Property prop = ModuleLoader.config.get(category, propName, default_);
 		prop.comment = desc;
-		setNeedsRestart(prop);
+
+		return prop.getInt(default_);
+	}
+
+	public static int loadPropInt(String propName, String category, String desc, int default_, int minValue, int maxValue) {
+		Property prop = ModuleLoader.config.get(category, propName, default_, desc, minValue, maxValue);
 
 		return prop.getInt(default_);
 	}
@@ -32,7 +36,6 @@ public class ConfigHelper {
 	public static double loadPropDouble(String propName, String category, String desc, double default_) {
 		Property prop = ModuleLoader.config.get(category, propName, default_);
 		prop.comment = desc;
-		setNeedsRestart(prop);
 
 		return prop.getDouble(default_);
 	}
@@ -40,7 +43,6 @@ public class ConfigHelper {
 	public static boolean loadPropBool(String propName, String category, String desc, boolean default_) {
 		Property prop = ModuleLoader.config.get(category, propName, default_);
 		prop.comment = desc;
-		setNeedsRestart(prop);
 
 		return prop.getBoolean(default_);
 	}
@@ -48,7 +50,6 @@ public class ConfigHelper {
 	public static String loadPropString(String propName, String category, String desc, String default_) {
 		Property prop = ModuleLoader.config.get(category, propName, default_);
 		prop.comment = desc;
-		setNeedsRestart(prop);
 
 		return prop.getString();
 	}
@@ -56,15 +57,9 @@ public class ConfigHelper {
 	public static String[] loadPropStringList(String propName, String category, String desc, String[] default_) {
 		Property prop = ModuleLoader.config.get(category, propName, default_);
 		prop.comment = desc;
-		setNeedsRestart(prop);
 		
 		return prop.getStringList();
 	}
 
-	private static void setNeedsRestart(Property prop) {
-		if(needsRestart)
-			prop.setRequiresMcRestart(needsRestart);
-		needsRestart = false;
-	}
 	
 }

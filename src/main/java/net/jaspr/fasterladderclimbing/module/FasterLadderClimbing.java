@@ -30,7 +30,7 @@ public class FasterLadderClimbing extends Feature {
     public void setupConfig() {
         allowQuickAscension = loadPropBool("Allow going UP faster", "If [false], then player can only climb up the ladder at normal speed.", true);
         allowQuickDescension = loadPropBool("Allow going DOWN faster", "If [false], then player can only go down the ladder at normal speed.", true);
-        speedModifier = loadPropInt("Speed modifier", "1 is Vanilla speed, 11 is lightning speed", 4);
+        speedModifier = loadPropInt("Speed modifier", "0 is Vanilla speed, 10 is lightning speed", 4, 0, 11);
     }
 
     @SubscribeEvent
@@ -88,7 +88,7 @@ public class FasterLadderClimbing extends Feature {
 
         private float getElevationChangeUpdate() {
             System.out.println("CURRENT MODIFER = " + speedModifier);
-            return (float)Math.abs(player.rotationPitch / 90.0) * (((float)speedModifier - 1 ) / 9);
+            return (float)Math.abs(player.rotationPitch / 90.0) * (((float)speedModifier) / 10);
         }
 
         public void moveUpFarther() {

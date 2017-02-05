@@ -65,7 +65,7 @@ public final class ModuleLoader {
 
 		setupConfig(event);
 
-		forEachModule(module -> FMLLog.info("[Quark] Module " + module.name + " is " + (module.enabled ? "enabled" : "disabled")));
+		forEachModule(module -> FMLLog.info("[FasterLadderClimbing] Module " + module.name + " is " + (module.enabled ? "enabled" : "disabled")));
 
 		forEachEnabled(module -> module.preInit(event));
 	}

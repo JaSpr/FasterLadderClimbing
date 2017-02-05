@@ -169,7 +169,7 @@ public class Module {
 	}
 
 	String makeName() {
-		return getClass().getSimpleName().replaceAll("Faster", "").toLowerCase();
+		return getClass().getSimpleName().replaceAll("FasterLadderClimber", "").toLowerCase();
 	}
 
 	public String getModuleDescription() {
