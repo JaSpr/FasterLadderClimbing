@@ -49,7 +49,7 @@ public class GuiFactory implements IModGuiFactory {
 	}
 
 	@Override
-	public RuntimeOptgitionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
+	public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
 		return null;
 	}
 
