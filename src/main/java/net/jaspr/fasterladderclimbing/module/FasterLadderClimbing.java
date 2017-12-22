@@ -25,13 +25,13 @@ import static net.minecraft.entity.MoverType.SELF;
 public class FasterLadderClimbing extends Feature {
 
     private boolean allowQuickAscension;
-    private boolean allowQuickDescension;
+    private boolean allowQuickDescent;
     private int speedModifier;
 
     @Override
     public void setupConfig() {
         allowQuickAscension = loadPropBool("Allow going UP faster", "If [false], then player can only climb up the ladder at normal speed.", true);
-        allowQuickDescension = loadPropBool("Allow going DOWN faster", "If [false], then player can only go down the ladder at normal speed.", true);
+        allowQuickDescent = loadPropBool("Allow going DOWN faster", "If [false], then player can only go down the ladder at normal speed.", true);
         speedModifier = loadPropInt("Speed modifier", "0 is Vanilla speed, 10 is lightning speed", 4, 0, 11);
     }
 
@@ -46,7 +46,7 @@ public class FasterLadderClimbing extends Feature {
         if (player.isOnLadder() && !player.isSneaking()) {
             EntityClimber climber = new EntityClimber(player);
 
-            if (allowQuickDescension && climber.isFacingDownward() && !climber.isMovingForward() && !climber.isMovingBackward()) {
+            if (allowQuickDescent && climber.isFacingDownward() && !climber.isMovingForward() && !climber.isMovingBackward()) {
                 climber.moveDownFarther();
             } else if (allowQuickAscension && climber.isFacingUpward() && climber.isMovingForward()) {
                 climber.moveUpFarther();
@@ -62,7 +62,7 @@ public class FasterLadderClimbing extends Feature {
 
     @Override
     public String[] getIncompatibleMods() {
-        return new String[] { "quark" };
+        return new String[] {};
     }
 
     private class EntityClimber {

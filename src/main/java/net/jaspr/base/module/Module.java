@@ -34,8 +34,8 @@ import java.util.function.Consumer;
 public class Module {
 
 	public final String name = makeName();
-	public final Map<String, Feature> features = new HashMap();
-	public final List<Feature> enabledFeatures = new ArrayList();
+	public final Map<String, Feature> features = new HashMap<>();
+	public final List<Feature> enabledFeatures = new ArrayList<>();
 	public boolean enabled;
 
 	public void addFeatures() {
@@ -93,7 +93,7 @@ public class Module {
 						}
 
 					if(!failures.isEmpty())
-						FMLLog.info("[" + feature.configName + "] is forcefully disabled as it's incompatible with the following loaded mods: " + failures);
+						FMLLog.log.info("[" + feature.configName + "] is forcefully disabled as it's incompatible with the following loaded mods: " + failures);
 				}
 			}
 
