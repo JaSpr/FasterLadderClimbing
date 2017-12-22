@@ -60,7 +60,7 @@ public class FasterLadderClimbing extends Feature {
 
     @Override
     public String[] getIncompatibleMods() {
-        return new String[] { "quark" };
+        return new String[] { };
     }
 
     private class EntityClimber {
